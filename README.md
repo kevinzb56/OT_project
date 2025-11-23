@@ -74,9 +74,9 @@ The implementation was tested on a Synthetic Dataset and the Wisconsin Breast Ca
 
 | Dataset | Metric | Fast PSO | Gradient Descent (Adam) | Difference |
 | :--- | :--- | :--- | :--- | :--- |
-| **Small Synthetic** | Test Accuracy | **85.00%** | 77.50% | \<span style="color:green"\>+7.50%\</span\> |
+| **Small Synthetic** | Test Accuracy | **85.00%** | 77.50% | +7.50%|
 | | Training Time | 0.56s | **0.09s** | PSO is 6x slower |
-| **Wisconsin Cancer**| Test Accuracy | 96.49% | **98.25%** | \<span style="color:red"\>-1.76%\</span\> |
+| **Wisconsin Cancer**| Test Accuracy | 96.49% | **98.25%** | -1.76% |
 | | Training Time | 0.22s | **0.13s** | PSO is 1.6x slower |
 
 **Conclusion:** While PSO remains slower than the highly optimized C-backend of Scikit-Learn, the **Fast PSO** implementation proves it can achieve superior generalization on noisy/synthetic data and highly competitive accuracy on real-world medical data.
