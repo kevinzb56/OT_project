@@ -1,18 +1,18 @@
-# ⚡ Optimizing Deep Neural Network Weights using Fast Particle Swarm Optimization (PSO)
+# Optimizing Deep Neural Network Weights using Fast Particle Swarm Optimization (PSO)
 
-## 📖 Overview
+## Overview
 
 This project explores the viability of **Non-Gradient Optimization** for Deep Feedforward Neural Networks (DFNNs). Specifically, it implements a **Speed-Optimized Particle Swarm Optimization (Fast PSO)** algorithm to train neural networks, replacing standard Backpropagation (Gradient Descent).
 
 While gradient-based methods (Adam, SGD) are the industry standard, they often get trapped in local minima. Meta-heuristics like PSO offer robust global search capabilities but are notoriously slow. This project aims to bridge that gap by implementing aggressive speed optimizations (Vectorization + JIT Compilation) to make PSO competitive with modern Gradient Descent.
 
-### 🎯 Research Goal
+### Research Goal
 
 To determine if an aggressively optimized PSO algorithm can achieve classification accuracy comparable to or better than Gradient Descent while maintaining acceptable computational speed on complex classification tasks.
 
 -----
 
-## 🧠 The Algorithm
+## The Algorithm
 
 The project implements a **Constriction-Factor Particle Swarm Optimization**. In this framework, every "particle" in the swarm represents a single candidate neural network.
 
@@ -58,7 +58,7 @@ $$Fitness(\theta) = -\frac{1}{N_{samples}} \sum [y \log(\hat{y}) + (1-y) \log(1-
 
 -----
 
-## 🚀 Key Features
+## Key Features
 
   * **Hybrid & Fast PSO Implementation**: A custom PSO built from scratch, specifically tuned for high-dimensional weight optimization.
   * **Numba JIT Acceleration**: Activation functions (ReLU, Sigmoid) and critical loops are compiled using Numba's Just-In-Time compiler for C-like performance.
@@ -68,7 +68,7 @@ $$Fitness(\theta) = -\frac{1}{N_{samples}} \sum [y \log(\hat{y}) + (1-y) \log(1-
 
 -----
 
-## 📊 Performance Results
+## Performance Results
 
 The implementation was tested on a Synthetic Dataset and the Wisconsin Breast Cancer Dataset (WBCD).
 
@@ -83,7 +83,7 @@ The implementation was tested on a Synthetic Dataset and the Wisconsin Breast Ca
 
 -----
 
-## 🛠️ Installation
+## Installation
 
 1.  **Clone the repository:**
 
@@ -101,7 +101,7 @@ The implementation was tested on a Synthetic Dataset and the Wisconsin Breast Ca
 
 -----
 
-## 💻 Usage
+## Usage
 
 The project is contained within a Jupyter Notebook. You can run the full experiment suite directly.
 
@@ -140,14 +140,14 @@ best_weights_vector, best_loss = pso.optimize(fitness_func)
 
 -----
 
-## 👥 Contributors
+## Contributors
 
   * **[Viraj Vora](https://github.com/viraj200524)** - *Veermata Jijabai Technological Institute (VJTI)*
   * **[Kevin Shah](https://github.com/kevinzb56)** - *Veermata Jijabai Technological Institute (VJTI)*
 
 -----
 
-## 📄 References
+## References
 
   * [Optimizing Neural Network Weights Using Nature-Inspired Algorithms](https://arxiv.org/pdf/2105.09983)
   * [UCI Machine Learning Repository: Wisconsin Breast Cancer Dataset](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
